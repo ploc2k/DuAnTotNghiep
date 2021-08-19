@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FoodOrder</string>
+    <string name="chkRemember">Remember me?</string>
+    <string name="password">Password</string>
+    <string name="login">Đăng nhập</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_adapter_amount">\Số lượng: \</string>
+    <string name="text_adapter_price">\Giá: \</string>
+    <string name="tittle_tab_food">Đồ ăn</string>
+    <string name="text_search">Nhập để tìm kiếm</string>
+</resources>

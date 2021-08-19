@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "632182542418",
+    "project_id": "smartdatdo-ef63c",
+    "storage_bucket": "smartdatdo-ef63c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632182542418:android:77712d1266589c892e8f8b",
+        "android_client_info": {
+          "package_name": "com.example.smartorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632182542418-95iv2mmvpgbvcivrce21kv6giek9v7t6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQFjEMOpYjKvvRXMPeAUn-pI5wflqgIvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632182542418-95iv2mmvpgbvcivrce21kv6giek9v7t6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

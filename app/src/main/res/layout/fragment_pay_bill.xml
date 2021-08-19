@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragment.cashier.PayBillFragment">
+
+    <TextView
+        android:id="@+id/tvBillCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Mã hóa đơn" />
+
+    <TextView
+        android:id="@+id/tvTableCode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBillCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Bàn số 1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListBillOne"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/lnDiscount"
+        app:layout_constraintTop_toBottomOf="@+id/tvTableCode" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lnDiscount"
+        android:layout_margin="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rlTotalMoney"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20">
+
+            <EditText
+                android:id="@+id/edtCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textSize="@dimen/_15sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_4sdp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_19sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_6sdp"
+            android:text="Giảm giá" />
+    </LinearLayout>
+
+    <RelativeLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:id="@+id/rlTotalMoney"
+        app:layout_constraintBottom_toTopOf="@id/lnButton"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginRight="@dimen/_10sdp"
+            android:id="@+id/tvTongtien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:text="Tổng tiền"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:layout_marginRight="@dimen/_10sdp"
+            android:id="@+id/tvGiamGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tvTongtien"
+            android:text="Giảm giá: 0 VNĐ"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:layout_marginRight="@dimen/_10sdp"
+            android:id="@+id/tvThanhToan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvGiamGia"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_alignParentRight="true"
+            android:text="Thanh toán"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lnButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:weightSum="3">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btnCancel"
+            android:layout_margin="@dimen/_8sdp"
+            android:text="Hủy" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:id="@+id/btnPay"
+            android:layout_weight="2"
+            android:text="Thanh toán" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

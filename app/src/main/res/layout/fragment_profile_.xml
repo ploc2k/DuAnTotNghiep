@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/qq"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.ProfileFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            android:background="@drawable/bg_header_info"
+            android:id="@+id/ctlHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/imgDown"
+                android:background="@drawable/down_button_30px"
+                app:layout_constraintEnd_toEndOf="@id/ctlHeader"
+                app:layout_constraintHorizontal_bias="0.97"
+                app:layout_constraintStart_toStartOf="@id/ctlHeader"
+                app:layout_constraintTop_toTopOf="@id/ctlHeader" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                app:layout_constraintStart_toStartOf="@id/ctlHeader"
+                app:layout_constraintEnd_toEndOf="@id/ctlHeader"
+                android:id="@+id/imgAvatar"
+                app:layout_constraintTop_toTopOf="@id/ctlHeader"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:src="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Họ và tên"
+                android:id="@+id/tvNameUser"
+                app:layout_constraintTop_toBottomOf="@id/imgAvatar"
+                app:layout_constraintStart_toStartOf="@id/ctlHeader"
+                app:layout_constraintEnd_toEndOf="@id/ctlHeader"
+                android:textSize="@dimen/_23sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPhone"
+                app:layout_constraintTop_toBottomOf="@id/tvNameUser"
+                android:text="0987654321"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="@id/ctlHeader"
+                app:layout_constraintEnd_toEndOf="@id/ctlHeader" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/btnEditProfile"
+            android:background="@drawable/bg_btn_edit_profile"
+            app:layout_constraintStart_toStartOf="@id/ctlHeader"
+            app:layout_constraintEnd_toEndOf="@id/ctlHeader"
+            app:layout_constraintTop_toTopOf="@id/ctlHeader"
+            android:layout_marginTop="@dimen/_147sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnEditProfile"
+            android:text="Thông tin cá nhân"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            android:id="@+id/tvAccInfo"
+            android:textColor="@color/black"
+            android:paddingLeft="@dimen/_20sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingLeft="@dimen/_30sdp"
+            android:id="@+id/rlName"
+            app:layout_constraintTop_toBottomOf="@id/tvAccInfo">
+
+            <ImageView
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/collaborator_male_80px"
+                android:id="@+id/imgName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgName"
+                android:text="Họ tên"
+                android:textStyle="bold"
+                android:id="@+id/tvName"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgName"
+                android:layout_below="@id/tvName"
+                android:text="ikujhgtfdrtyu"
+                android:id="@+id/tvSName"
+                android:layout_marginLeft="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:paddingLeft="@dimen/_30sdp"
+            android:id="@+id/rlPhone"
+            app:layout_constraintTop_toBottomOf="@id/rlName">
+
+            <ImageView
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/phone_48px"
+                android:id="@+id/imgPhone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgPhone"
+                android:text="Số điện thoại"
+                android:textStyle="bold"
+                android:id="@+id/tvPhone1"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgPhone"
+                android:layout_below="@id/tvPhone1"
+                android:text="0987654321"
+                android:id="@+id/tvSPhone"
+                android:layout_marginLeft="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:paddingLeft="@dimen/_30sdp"
+            android:id="@+id/rlAge"
+            app:layout_constraintTop_toBottomOf="@id/rlPhone">
+
+            <ImageView
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/age_48px"
+                android:id="@+id/imgAge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgAge"
+                android:text="Tuổi"
+                android:textStyle="bold"
+                android:id="@+id/tvAge"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgAge"
+                android:layout_below="@id/tvAge"
+                android:text="17"
+                android:id="@+id/tvSAge"
+                android:layout_marginLeft="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:paddingLeft="@dimen/_30sdp"
+            android:id="@+id/rlAddress"
+            app:layout_constraintTop_toBottomOf="@id/rlAge">
+
+            <ImageView
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/address_48px"
+                android:id="@+id/imgAddress" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgAddress"
+                android:text="Địa chỉ"
+                android:textStyle="bold"
+                android:id="@+id/tvAddress"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgAddress"
+                android:layout_below="@id/tvAddress"
+                android:text="Hà Nội"
+                android:id="@+id/tvSAddress"
+                android:layout_marginLeft="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:paddingLeft="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@id/rlAddress">
+
+            <ImageView
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/identification_documents_40px"
+                android:id="@+id/imgCmnd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgCmnd"
+                android:text="Số CMND/CCCD"
+                android:textStyle="bold"
+                android:id="@+id/tvCmnd"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgCmnd"
+                android:layout_below="@id/tvCmnd"
+                android:text="123456789"
+                android:id="@+id/tvSCMND"
+                android:layout_marginLeft="@dimen/_10sdp" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

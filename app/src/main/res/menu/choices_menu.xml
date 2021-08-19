@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/order"
+        android:title="Gọi món" />
+    <item
+        android:id="@+id/invoicePreview"
+        android:title="Xem trước hóa đơn" />
+</menu>
